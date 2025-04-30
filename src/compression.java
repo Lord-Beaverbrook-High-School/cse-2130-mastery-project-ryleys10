@@ -33,6 +33,6 @@ public class compression {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-            System.out.println(array.get(index)[index]);
+            System.out.println(array.indexOf(array.get(index)));
     }
 }
