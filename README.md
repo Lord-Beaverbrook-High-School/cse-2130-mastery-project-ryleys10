@@ -1,3 +1,4 @@
+[![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=19385317)
 Compression is a process used to make large files smaller so that they do not use up as much memory. A simple form of binary compression looks at a file and records how many instances of each 1 and 0 appear consecutively in a sequence.
 
 For example:
