@@ -79,7 +79,16 @@ public class writerToCSV {
         String line = null;
         List<String> lines = new ArrayList<>();
         while ((line = br.readLine()) != null) {
-            lines.add(Arrays.toString(line.split(" ")));
+            //lines.add((line.split(" ")));
+            List<String> temp = List.of((line.split(" ")));
+            System.out.print("test " + temp);
+            System.out.println(temp.get(0));
+            System.out.println(temp.get(1));
+            System.out.println(temp.get(2));
+            System.out.println(temp.get(3));
+            System.out.println(temp.get(4));
+            System.out.println(temp.get(5));
+            System.out.println(temp.size());
         }
         br.close();
         return lines;

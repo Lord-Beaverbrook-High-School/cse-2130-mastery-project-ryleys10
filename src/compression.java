@@ -21,8 +21,9 @@ public class compression {
             throw new RuntimeException(e);
         }
         int arrayLength = array.size();
+        System.out.println(arrayLength);
             for (int i = 0; i < arrayLength; i++) {
-            System.out.println(array.get(i));
+            System.out.println(array.get(0));
         }
     }
 
@@ -33,6 +34,6 @@ public class compression {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-            System.out.println(array.indexOf(array.get(index)));
+        System.out.println(array.get(0));
     }
 }
