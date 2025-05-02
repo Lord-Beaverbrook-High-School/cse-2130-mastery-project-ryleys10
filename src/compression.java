@@ -8,8 +8,36 @@ public class compression {
         try {
             array = writerToCSV.ReadingEntireTXTFile(input);
             fileCreator.creatorNoOutput(output);
+
         } catch (IOException e) {
             throw new RuntimeException(e);
+        }
+        for (int i = 0; i < array.size(); i++) {
+            System.out.print(array.get(i) + " ");
+        }
+        int counter = 1;
+        String currentNumber = array.get(0);
+        List<String> compressedString = new ArrayList<>();
+        //for (int i = 0; i < array.size(); i++) {
+        for (int i = 0; i < 10; i++) {
+            if (currentNumber.equals(array.get(i))) {
+                System.out.println(array.get(i) + " get I ");
+                counter++; System.out.println(counter);
+                if (array.get(i + 1) != currentNumber){
+                    System.out.println(array.get(i + 1) + " get I + 1");
+                    compressedString.add(currentNumber);
+                    System.out.println(currentNumber + " Current Number");
+                    compressedString.add(array.get(i));
+                    System.out.println(array.get(i) + " get I Again");
+                    System.out.println(counter + " reset counter");
+                    counter = 1;
+                    currentNumber = array.get(i + 1);
+                    System.out.println(array.get(i + 1) + " Current Number after reset");
+                }
+            }
+        }
+        for (int j = 0; j < compressedString.size(); j++) {
+            System.out.print(compressedString.get(j) + " ");
         }
     }
 
