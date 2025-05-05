@@ -15,25 +15,31 @@ public class compression {
         for (int i = 0; i < array.size(); i++) {
             System.out.print(array.get(i) + " ");
         }
-        int counter = 1;
+        int counter = 0;
         String currentNumber = array.get(0);
         List<String> compressedString = new ArrayList<>();
         //for (int i = 0; i < array.size(); i++) {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 100; i++) {
+            System.out.println(i + " i at start\n");
+            System.out.print(currentNumber + " currentnumber, ");
+            System.out.print(array.get(i) + " get i\n");
             if (currentNumber.equals(array.get(i))) {
-                System.out.println(array.get(i) + " get I ");
-                counter++; System.out.println(counter);
-                if (array.get(i + 1) != currentNumber){
-                    System.out.println(array.get(i + 1) + " get I + 1");
-                    compressedString.add(currentNumber);
-                    System.out.println(currentNumber + " Current Number");
-                    compressedString.add(array.get(i));
-                    System.out.println(array.get(i) + " get I Again");
-                    System.out.println(counter + " reset counter");
-                    counter = 1;
+                System.out.println(array.get(i) + " get I");
+                counter++; System.out.println(counter + " counter");
+                String test = array.get(i);
+                System.out.println(test + " test print");
+                String test2 = array.get(i + 1);
+                System.out.println(test2 + " test print 2");
+                if (array.get(i).equals(array.get(i +1))) { //if (!test.equals(test2)){
+                    //System.out.println(array.get(i) + " get I test " + array.get(i + 1) + " get I test+1");
+                    System.out.println("entered loop");
+                    compressedString.add(String.valueOf(counter)); System.out.println(counter + " added counter");
+                    compressedString.add(array.get(i)); System.out.println(array.get(i) + " added I");
+                    counter = 0;
                     currentNumber = array.get(i + 1);
                     System.out.println(array.get(i + 1) + " Current Number after reset");
                 }
+                System.out.println("");
             }
         }
         for (int j = 0; j < compressedString.size(); j++) {
