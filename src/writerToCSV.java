@@ -16,6 +16,24 @@ public class writerToCSV {
             throw new RuntimeException(e);
         }
     }
+    public static void WritingToFile(String fileName, String data) {
+        try {
+            FileWriter fw = new FileWriter(fileName);
+            fw.write(data);
+            fw.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    public static void AppendToFile(String fileName, String data) {
+        try {
+            FileWriter fw = new FileWriter(fileName, true);
+            fw.write(data);
+            fw.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     public static void AppendingToCSV(String fileName, String data, Boolean newLine) {
         try {
